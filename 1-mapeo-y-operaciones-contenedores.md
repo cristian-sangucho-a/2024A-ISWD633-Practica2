@@ -18,6 +18,8 @@ No puedes mapear puertos a un contenedor existente directamente después de su c
 # COMPLETAR
 
 # COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:8080
+![image](https://github.com/cristian-sangucho-a/2024A-ISWD633-Practica2/assets/93937686/84d5b33d-5557-4df9-80c4-a3b35ddf27c2)
+
 
 ### ¿Cómo obtener la contraseña solicitada?
 Para obtener la contraseña solicitada es necesario ingresar al contenedor.
@@ -32,10 +34,11 @@ docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+Listar directorios y ficheros contenidos en el directorio actual.
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+Mostrar detalles de las directorios como la fecha de creacion y los permiso de modificacion.
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
-# COMPLETAR
-# COLOCAR UNA CAPTURA DE PANTALLA
+![image](https://github.com/cristian-sangucho-a/2024A-ISWD633-Practica2/assets/93937686/a91de38a-7eae-481a-81d5-7dd857ba0c8d)
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
 El comando **docker exec** te permite acceder a la sesión shell de un contenedor en ejecución, estarás dentro del contenedor y podrás ejecutar comandos como si estuvieras en una terminal normal. 
@@ -69,7 +72,8 @@ Ejecutar
 ```
 whoami
 ```
-# COLOCAR UNA CAPTURA DE PANTALLA
+![image](https://github.com/cristian-sangucho-a/2024A-ISWD633-Practica2/assets/93937686/b93f712e-1cdc-4f90-8736-d66daddcf8b5)
+
 
 **Si se visualiza el mensaje command not found, considerar**
 El problema se debe a que no se ha asignado un terminal de salida al contenedor al ejecutar el comando. Cuando usas docker exec -i jenkins-server /bin/bash en Windows, el comando se ejecuta pero no hay un terminal asignado para mostrar la salida del comando ls.
@@ -90,8 +94,8 @@ docker exec -it <nombre contenedor> <programa o comando>
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
 
 # COMPLETAR
+![image](https://github.com/cristian-sangucho-a/2024A-ISWD633-Practica2/assets/93937686/a1191eb7-07d6-4d0c-9a69-c0d9230e3a23)
 
-### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
 
