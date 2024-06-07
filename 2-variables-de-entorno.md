@@ -10,21 +10,44 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 
 ### Crear un contenedor a partir de la imagen de nginx:alpine con las siguientes variables de entorno: username y role. Para la variable de entorno rol asignar el valor admin.
 
-# COMPLETAR
+![image](https://github.com/cristian-sangucho-a/2024A-ISWD633-Practica2/assets/93937686/7fdf556a-b410-4fc8-b20a-76f206ff249b)
 
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos
-# COMPLETAR
 
 ### ¿El contenedor se está ejecutando?
-# COMPLETAR
+No, al ejecutar 
+´´´
+docker ps -a
+´´´
+En el contenedor sql muestra
+Exited (1) 4 minutes ago  
 
 ### Identificar el problema
-# COMPLETAR
+´´´´
+docker logs sql8
+
+
+2024-06-07 13:45:02+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.0-1.el9 started.
+2024-06-07 13:45:04+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2024-06-07 13:45:04+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.0-1.el9 started.
+2024-06-07 13:45:05+00:00 [ERROR] [Entrypoint]: Database is uninitialized and password option is not specified
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+
+no tiene las suficientes variables de entorno.
+´´´´
+
 
 ### Eliminar el contenedor creado con mysql:8 
 # COMPLETAR
+´´´´
+C:\Users\LabP3E010\containers>docker rm sql8
+sql8
+´´´´
+
 
 ### Para crear un contenedor con variables de entorno especificadas
 - Portabilidad: Las aplicaciones se vuelven más portátiles y pueden ser desplegadas en diferentes entornos (desarrollo, pruebas, producción) simplemente cambiando el archivo de variables de entorno.
