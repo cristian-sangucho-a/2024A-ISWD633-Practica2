@@ -1,6 +1,6 @@
 # Variables de Entorno
 ### ¿Qué son las variables de entorno
-# COMPLETAR
+Es una variable dinámica que puede afectar al comportamiento de los procesos en ejecución en un ordenador. Son parte del entorno en el que se ejecuta un proceso.
 
 ### Para crear un contenedor con variables de entorno
 
@@ -42,9 +42,10 @@ no tiene las suficientes variables de entorno.
 
 
 ### Eliminar el contenedor creado con mysql:8 
-# COMPLETAR
+
 ´´´´
 C:\Users\LabP3E010\containers>docker rm sql8
+
 sql8
 ´´´´
 
@@ -64,9 +65,15 @@ docker run -d --name <nombre contenedor> --env-file=<nombreArchivo>.<extensión>
 Es necesario especificar la ruta absoluta del archivo si este se encuentra en una ubicación diferente a la que estás ejecutando el comando docker run.
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos y configurar las variables de entorno mediante un archivo
-# COMPLETAR
+![image](https://github.com/cristian-sangucho-a/2024A-ISWD633-Practica2/assets/93937686/678a43da-8a84-4921-8784-70fc789c0754)
 
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR 
+
+![image](https://github.com/cristian-sangucho-a/2024A-ISWD633-Practica2/assets/93937686/0b9f286b-ea99-45cf-8041-6a7c099dafa6)
+
 
 ### ¿Qué bases de datos existen en el contenedor creado?
-# COMPLETAR
+```
+docker exec -it sql8 mysql -u root -p -e "show databases;"
+```
+![image](https://github.com/cristian-sangucho-a/2024A-ISWD633-Practica2/assets/93937686/0928aa62-be07-4c51-908d-b118c1f56f25)
+
